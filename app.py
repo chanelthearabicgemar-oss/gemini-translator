@@ -11,7 +11,8 @@ st.markdown("Translate Text, Images, and Voice using **Gemini 2.5 Flash**")
 
 # --- 2. Configuration ---
 # You can also use st.sidebar.text_input for the key to keep it private
-API_KEY = "AIzaSyDxqRiWWLs7qRjUJetZARlgxrFjnujZZXQ" 
+import streamlit as st
+API_KEY = st.secrets[AIzaSyDxqRiWWLs7qRjUJetZARlgxrFjnujZZXQ]
 
 if API_KEY == "YOUR_GEMINI_API_KEY_HERE":
     st.warning("Please enter your Gemini API Key in the code.")
