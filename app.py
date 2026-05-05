@@ -66,7 +66,7 @@ with tab3:
 
 # --- 5. Settings Sidebar ---
 enable_voice = st.sidebar.checkbox("Enable Audio Playback", value=True)
-st.sidebar.info("Using Gemini 2.5 Flash for multimodal translation.")
+st.sidebar.info("Using gemini-2.5-flash-lite for multimodal translation.")
 
 # --- 6. Translation Logic ---
 if st.button("Translate", type="primary"):
@@ -93,7 +93,7 @@ if st.button("Translate", type="primary"):
         with st.spinner(f"Translating to {target_lang}..."):
             try:
                 response = client.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-2.5-flash-lite",
                     contents=inputs
                 )
                 
